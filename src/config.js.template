@@ -1,0 +1,13 @@
+// don't forget to enable auth by email + password on your firebase project
+// rename this file to config.js
+export default {
+
+	firebase: {
+		apiKey: YOUR_API_KEY,
+		authDomain: YOUR_AUTH_DOMAIN,
+		databaseURL: YOUR_DATABASE_URL,
+		projectId: YOUR_PROJECT_ID,
+		storageBucket: YOUR_STORAGE_BUCKET,
+		messagingSenderId: YOUR_MSG_SENDER_ID
+	}
+}

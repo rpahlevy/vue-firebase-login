@@ -5,23 +5,21 @@ import App from './App'
 import router from './router'
 import firebase from 'firebase'
 
-Vue.config.productionTip = false
+// firebase config such as apikey, dbURL, etc.
+import config from './config'
 
-var config = {
-	apiKey: "AIzaSyCwDsOatorlqiL5nuwKYCAHuga4ZYpeKm0",
-	authDomain: "vue-firebase-login-rpahlevy.firebaseapp.com",
-	databaseURL: "https://vue-firebase-login-rpahlevy.firebaseio.com",
-	projectId: "vue-firebase-login-rpahlevy",
-	storageBucket: "vue-firebase-login-rpahlevy.appspot.com",
-	messagingSenderId: "1015101287420"
-};
+Vue.config.productionTip = false;
 
-firebase.initializeApp(config);
+let app;
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+firebase.initializeApp(config.firebase);
+firebase.auth().onAuthStateChanged(function (user) {
+	if (!app) {
+		app = new Vue({
+			el: '#app',
+			template: '<App/>',
+			components: { App },
+			router
+		})
+	}
 })
