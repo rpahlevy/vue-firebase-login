@@ -5,7 +5,7 @@ import Hello from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
 
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 
 Vue.use(Router)
 
