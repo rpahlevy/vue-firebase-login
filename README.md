@@ -1,6 +1,12 @@
 # vue-firebase-login
 
-> A Vue.js project using Firebase for authentication
+A Vue.js project using Firebase for authentication. This project is based on Medium article by **Anas Mammeri**. You can find the article [here](https://medium.com/@anas.mammeri/vue-2-firebase-how-to-build-a-vue-app-with-firebase-authentication-system-in-15-minutes-fdce6f289c3c).
+
+## Firebase Config
+
+1. Copy `config.js.template` and rename it to `config.js`
+2. Fill in your Firebase Project config, such as `API_KEY`, `DATABASE_NAME`, etc.
+3. Don't forget to enable Authentication by Email and Password in your Firebase Project
 
 ## Build Setup
 
