@@ -34,3 +34,31 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Firebase Hosting *(optional)*
+
+This is an optional step if you want to host your app on Firebase Hosting.
+``` bash
+# Install firebase-tools
+npm install -g firebase-tools
+
+# Login into your Firebase account
+firebase login
+
+# cd to root of your project, then init firebase
+firebase init
+
+# Select hosting and your Firebase Project to host your App
+# Set dist as public directory
+# Configure as Single App? Y
+
+# build your App
+npm run build
+
+# deploy to Firebase Hosting
+firebase deploy
+
+# To update your App just build it again and deploy
+npm run build
+firebase deploy
+```
